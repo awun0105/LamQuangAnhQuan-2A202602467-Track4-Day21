@@ -1,22 +1,18 @@
-# Báo cáo Day 6: [ĐIỀN tên đề tài ngắn]
-
-> Thay **mọi** ô có chữ ĐIỀN nằm trong ngoặc vuông bằng nội dung của bạn, xoá luôn cả dấu ngoặc vuông. Lệnh `python tools/check_submission.py` sẽ báo FAIL nếu còn sót bất kỳ chỗ nào.
+# Báo cáo Day 6: Đánh Giá Chất Lượng Chiếu LiDAR - Camera & Độ Nhạy Sai Lệch Calibration
 
 - **Họ tên:** Lâm Quang Anh Quân
-- **MSSV:** 2A202602467 (phải trùng với MSSV trong tên repo `<HoVaTen>-<MSSV>-Track4-Day21`)
+- **MSSV:** 2A202602467
 - **Lớp:** AI20K-T4
 - **Link repo:** https://github.com/awun0105/LamQuangAnhQuan-2A202602467-Track4-Day21.git
-- **Topic:** [ĐIỀN một chữ cái A/B/C/D/E/F] — [ĐIỀN tên topic]
-- **Dataset:** [ĐIỀN một hoặc nhiều trong: data/synthetic, data/kitti_mini, data/nuscenes_mini_subset, log riêng]
-- **Các frame đã dùng:** [ĐIỀN danh sách frame id, ví dụ 000011, 000049 hoặc scene-0103_010]
+- **Topic:** A — LiDAR-camera projection QA
+- **Dataset:** data/kitti_mini, data/nuscenes_mini_subset, data/synthetic
+- **Các frame đã dùng:** 000011, 000004, 000021 (KITTI); scene-0103_010 (nuScenes); 000000 (synthetic)
 
-> Hãy viết ngắn: mỗi mục từ 3 đến 8 dòng, ưu tiên số liệu và hình ảnh.
+> Báo cáo đánh giá độ nhạy của phép chiếu LiDAR-Camera trước các sai lệch ngoại suy (extrinsic calibration drift) và đề xuất cơ chế giám sát tự động.
 
 ## 1. Claim
 
-Một câu khẳng định kỹ thuật có thể kiểm chứng. Ví dụ: *"Lệch yaw 1° làm 12% điểm LiDAR rơi ra khỏi vật thể ở 30 m, phát hiện được bằng edge-alignment score với ngưỡng X."*
-
-[ĐIỀN]
+Độ lệch góc xoay Yaw $\ge 1.0^\circ$ của cảm biến LiDAR làm suy giảm hơn $15\%$ tỷ lệ điểm LiDAR rơi đúng vào hộp 2D Bounding Box của xe hơi ở khoảng cách trên $25\,\text{m}$, và hiện tượng lệch này có thể được phát hiện tự động bằng chỉ số tương thích biên cạnh (Edge Alignment Score) với ngưỡng suy giảm vượt quá $20\%$.
 
 ## 2. Evidence
 
