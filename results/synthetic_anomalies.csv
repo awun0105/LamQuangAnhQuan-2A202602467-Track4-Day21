@@ -1,0 +1,8 @@
+anomaly_type,affected_frame,evidence_detail,detection_method
+Invalid Points (NaN/Inf),000000,"Có 23 điểm NaN, 0 điểm Inf trên tổng số 23953 điểm",np.isnan(pts).any(axis=1).sum() > 0
+Invalid Points (NaN/Inf),000001,"Có 23 điểm NaN, 0 điểm Inf trên tổng số 23781 điểm",np.isnan(pts).any(axis=1).sum() > 0
+Invalid Points (NaN/Inf),000002,"Có 23 điểm NaN, 0 điểm Inf trên tổng số 23790 điểm",np.isnan(pts).any(axis=1).sum() > 0
+Invalid Points (NaN/Inf),000003,"Có 22 điểm NaN, 0 điểm Inf trên tổng số 22063 điểm",np.isnan(pts).any(axis=1).sum() > 0
+Invalid Points (NaN/Inf),000004,"Có 23 điểm NaN, 0 điểm Inf trên tổng số 23760 điểm",np.isnan(pts).any(axis=1).sum() > 0
+Time Gap / Frame Drop,000003,"Chu kỳ delta_t = 0.20s (chuẩn 10Hz là 0.10s, mất 1 frame giữa frame 000002 và 000003)",timestamps[i] - timestamps[i-1] > 0.15s
+Sector / Beam Dropout,000003,Số điểm giảm đột ngột còn 22063 điểm (sụt giảm 1890 điểm so với mức chuẩn ~23953),len(points) < 0.95 * baseline_points
