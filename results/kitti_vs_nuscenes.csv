@@ -1,0 +1,13 @@
+dataset_config,frame_id,yaw_deg,total_points,points_inside_fov,fov_retention_pct,image_resolution
+KITTI 64-beam,000011,0.0,108004,19946,18.47,1242x375
+KITTI 64-beam,000011,1.0,108004,19952,18.47,1242x375
+KITTI 64-beam,000011,2.0,108004,19963,18.48,1242x375
+KITTI 64-beam,000011,3.0,108004,19948,18.47,1242x375
+nuScenes 32-beam (với bù chuyển động),scene-0103_010,0.0,34720,3120,8.99,1600x900
+nuScenes 32-beam (với bù chuyển động),scene-0103_010,1.0,34720,3125,9.0,1600x900
+nuScenes 32-beam (với bù chuyển động),scene-0103_010,2.0,34720,3126,9.0,1600x900
+nuScenes 32-beam (với bù chuyển động),scene-0103_010,3.0,34720,3133,9.02,1600x900
+nuScenes 32-beam (KHÔNG bù chuyển động),scene-0103_010,0.0,34720,2911,8.38,1600x900
+nuScenes 32-beam (KHÔNG bù chuyển động),scene-0103_010,1.0,34720,2912,8.39,1600x900
+nuScenes 32-beam (KHÔNG bù chuyển động),scene-0103_010,2.0,34720,2916,8.4,1600x900
+nuScenes 32-beam (KHÔNG bù chuyển động),scene-0103_010,3.0,34720,2918,8.4,1600x900
